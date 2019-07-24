@@ -19,7 +19,7 @@ services:
   netdata:
     image: netdata/netdata
     hostname: netdata.local # set to fqdn of host
-    ports:prometheus
+    ports:
       - 19999:19999
     cap_add:
       - SYS_PTRACE
