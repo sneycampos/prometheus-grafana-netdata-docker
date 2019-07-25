@@ -5,7 +5,7 @@ services:
     restart: always
     volumes:
      - ./monitor/prometheus.yml:/etc/prometheus/prometheus.yml
-    command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus"
+    command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus --storage.tsdb.retention.time=2d"
     ports:
      - 9090:9090
   grafana:
